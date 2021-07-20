@@ -44,6 +44,15 @@ const BookType = new GraphQLObjectType({
   }),
 });
 
+const AuthorType = new GraphQLObjectType({
+  name: "Author",
+  description: "This represents an author if a book",
+  fields: () => ({
+    id: { type: GraphQLNonNull(GraphQLInt) },
+    name: { type: GraphQLNonNull(GraphQLString) },
+  }),
+});
+
 const RootQueryType = new GraphQLObjectType({
   name: "Query",
   description: "Root Query",

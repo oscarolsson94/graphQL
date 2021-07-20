@@ -59,8 +59,13 @@ const RootQueryType = new GraphQLObjectType({
   fields: () => ({
     books: {
       type: GraphQLList(BookType),
-      description: "List of all books",
+      description: "List of All Books",
       resolve: () => books,
+    },
+    authors: {
+      type: GraphQLList(AuthorType),
+      description: "List of All Authors",
+      resolve: () => authors,
     },
   }),
 });

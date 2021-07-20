@@ -69,7 +69,7 @@ const RootQueryType = new GraphQLObjectType({
       args: {
         id: { type: GraphQLInt },
       },
-      resolve: (args) => books.find((book) => book.id === args.id),
+      resolve: (parent, args) => books.find((book) => book.id === args.id),
     },
     books: {
       type: GraphQLList(BookType),
